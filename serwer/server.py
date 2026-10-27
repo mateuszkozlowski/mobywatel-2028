@@ -136,12 +136,15 @@ class H(SimpleHTTPRequestHandler):
     def body(self):
         n = int(self.headers.get('Content-Length') or 0)
         return self.rfile.read(n) if n else b''
-    def public_rate(self,p):
-        if not PUBLIC_DEMO or not p.startswith('/api/'):return
+    def public_identity(self):
         identity=self.client_address[0]
         if os.environ.get('CIVIC_TRUST_PROXY')=='1':
             import ipaddress
             if ipaddress.ip_address(identity).is_private:identity=self.headers.get('X-Forwarded-For',identity)[:100]
+        return identity
+    def public_rate(self,p):
+        if not PUBLIC_DEMO or not p.startswith('/api/'):return
+        identity=self.public_identity()
         check_rate(identity,'qr' if p.startswith('/api/znak/') else 'request',600 if p.startswith('/api/znak/') else 240)
         if p in ('/api/assistant/route','/api/ai/explain-letter','/api/reply-draft'):check_rate(identity,'ai',12)
         if p=='/api/contract-read':check_rate(identity,'ocr',6)
@@ -226,15 +229,24 @@ class H(SimpleHTTPRequestHandler):
                 check_rate(self.client_address[0],'admin-login',5)
                 import admin_panel
                 return admin_panel.post(self,p)
+            if p == '/api/analytics':
+                if size>256:return self.js(dict(error='Żądanie jest zbyt duże.'),413)
+                import visit_counts
+                req=json.loads(self.body() or b'{}')
+                if not visit_counts.valid_action(req):return self.js(dict(error='Nieprawidłowe zdarzenie.'),400)
+                check_rate(self.public_identity(),'analytics',180)
+                return self.js(dict(recorded=visit_counts.record_action(req) if PUBLIC_DEMO else False))
             if p == '/api/page-view':
                 if size>256:return self.js(dict(error='Żądanie jest zbyt duże.'),413)
                 req=json.loads(self.body() or b'{}')
-                if not isinstance(req,dict) or not {'page'}<=set(req)<= {'page','cookie','count'} or req['page'] not in ('strona','aplikacja','materialy') or any(type(req[k]) is not bool for k in ('cookie','count') if k in req):return self.js(dict(error='Nieprawidłowa strona.'),400)
                 import visit_counts
-                path={'strona':'/pokaz.html','aplikacja':'/aplikacja','materialy':'/materialy.html'}[req['page']]
+                if not isinstance(req,dict) or not {'page'}<=set(req)<= {'page','cookie','count','source','device'} or not isinstance(req['page'],str) or req['page'] not in visit_counts.PAGE_KEYS or any(type(req[k]) is not bool for k in ('cookie','count') if k in req):return self.js(dict(error='Nieprawidłowa strona.'),400)
+                if ('source' in req or 'device' in req) and (not isinstance(req.get('source'),str) or req['source'] not in visit_counts.SOURCES or not isinstance(req.get('device'),str) or req['device'] not in visit_counts.DEVICES):return self.js(dict(error='Nieprawidłowy wymiar statystyk.'),400)
+                check_rate(self.public_identity(),'page-view',90)
+                path={'strona':'/pokaz.html','aplikacja':'/aplikacja','materialy':'/materialy.html','technologia':'/technology.html'}[req['page']]
                 visitor,cookie=visit_counts.browser_cookie(self.headers.get('Cookie')) if req.get('cookie') else (None,None)
                 if req.get('cookie') is False and 'civic_visit=' in (self.headers.get('Cookie') or ''):cookie='civic_visit=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax'
-                recorded=visit_counts.record(path,'document',visitor=visitor,count=req.get('count',True)) if PUBLIC_DEMO else False
+                recorded=visit_counts.record(path,'document',visitor=visitor,count=req.get('count',True),source=req.get('source'),device=req.get('device')) if PUBLIC_DEMO else False
                 return self.js(dict(recorded=recorded),cookie=cookie if recorded else None)
             if p == '/api/public/shelters':
                 if int(self.headers.get('Content-Length') or 0)>4096:return self.js(dict(error='Zbyt długie zapytanie.'),413)

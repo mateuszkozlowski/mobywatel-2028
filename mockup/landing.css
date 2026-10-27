@@ -31,7 +31,7 @@
 .research-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; }
 .research-overview .text-link { margin-top: 20px; }
 .research-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 0 0 32px; }
-.research-counts > div { display: flex; flex-direction: column-reverse; }
+.research-counts > div { display: flex; flex-direction: column-reverse; justify-content: flex-end; }
 .research-counts dt { max-width: 22ch; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .research-counts dd { margin: 0 0 6px; font: 600 60px/1.1 'Instrument Sans',Inter,sans-serif; letter-spacing: -.04em; }
 .research-change { border-radius: 20px; background: #e4ebfb; padding: 24px; }

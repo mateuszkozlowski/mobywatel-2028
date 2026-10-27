@@ -17,7 +17,7 @@ async function civicDispatchDemoScene(scene,status=()=>{}){
   else if(scene==='alert-air'||scene==='alert-ready'||scene==='alert-clear'){civicShowAlarm(scene==='alert-air'?'air':scene==='alert-clear'?'clear':'ready')}
   else if(scene==='kacper-shelters'){showProductTab('safety');civicSheltersForm(()=>showProductTab('safety'))}
   else throw new Error('unknown scene');
-  status(true);
+  status(true);window.dispatchEvent(new CustomEvent('civic-scene-opened',{detail:{scene}}));
  }catch(error){status(false,'Nie udało się otworzyć sprawy. Wróć do aplikacji i spróbuj ponownie.')}
 }
 if(window.parent!==window&&civicDemoRun)document.documentElement.classList.add('demo-embedded');

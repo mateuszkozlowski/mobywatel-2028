@@ -46,10 +46,15 @@ python3 -m unittest discover -s tests -v
 python3 deploy/check_javascript.py
 ```
 
-Testy korzystają z przygotowanych danych i atrap odpowiedzi. Nie wymagają klucza modelu. Workflow GitHub Actions jest przygotowany do uruchomienia po publikacji repozytorium; sam plik workflow nie oznacza, że CI już przeszło na GitHubie.
+Testy korzystają z przygotowanych danych i atrap odpowiedzi. Nie wymagają klucza modelu. Testy uruchamiają się na GitHubie po każdym pushu. [Wyniki GitHub Actions](https://github.com/mateuszkozlowski/mobywatel-2028/actions/workflows/checks.yml).
 
 Badania z 10 rzeczywistymi użytkownikami oraz analiza 10 person syntetycznych są osobnymi etapami. Publiczny wykres to opracowanie notatek z wcześniejszej wersji. Nie zmierzono jeszcze efektu poprawek.
 
 ## Licencja i autorstwo
 
 Autor koncepcji i zmian: Mateusz Kozłowski. Projekt rozwija bazowy [prototyp mObywatel.ai](https://mobywatel.ai/) Janusza Cieszyńskiego. Kod bazowy i objęte nim zmiany są udostępnione zgodnie z zachowaną licencją [MIT](LICENSE). MIT nie obejmuje godła RP, nazwy i oznaczeń mObywatela, wyglądu dokumentów ani innych wyłączonych materiałów. Wykorzystanie tych oznaczeń w koncepcji nie jest udzieleniem praw do nich. Logotypy Bielika, CERT Polska, PSP i IMGW identyfikują model i źródła danych; nie są objęte MIT i nie oznaczają partnerstwa. Ich pochodzenie zapisano w [SOURCES.json](mockup/assets/technology/SOURCES.json). Profile i portrety w naszym pokazie są fikcyjne.
+
+
+## Prywatne statystyki
+
+Panel `/admin` pokazuje zakresy dat, odsłony, opcjonalny dzienny licznik przeglądarek, źródła ruchu, scenariusze, działania i czas aktywności. CSV wymaga logowania. Dane działań są agregatami, bez IP, treści spraw ani historii powiązanej z cookie. [Definicje pomiaru](docs/ANALYTICS.md).

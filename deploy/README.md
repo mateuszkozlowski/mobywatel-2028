@@ -18,7 +18,7 @@ Public AI to zagraniczna usługa badawcza; polskie pochodzenie modelu nie oznacz
 
 ## MyDevil
 
-Katalog konta: ~/apps/mobywatel2028. releases/r61 zawiera pliki wydania, current wskazuje aktywne wydanie, shared przechowuje runtime.env (600), stan, pamięć i logi. control.sh zarządza supervisorem daemon. Proxy WWW łączy HTTPS z localhost:18790; port aplikacji nie jest publiczny. DNS i pozostałe strony konta pozostają bez zmian.
+Katalog konta: ~/apps/mobywatel2028. releases zawiera pliki kolejnych wydań, current wskazuje aktywne wydanie, shared przechowuje runtime.env (600), stan, pamięć i logi. control.sh zarządza supervisorem daemon. Proxy WWW łączy HTTPS z localhost:18790; port aplikacji nie jest publiczny. DNS i pozostałe strony konta pozostają bez zmian.
 
 Przy aktualizacji sprawdź sumy plików i testy przed atomową zmianą dowiązania current. Cofnięcie wydania nie może usuwać shared ani licznika wydatków. Przed cofnięciem do wersji sprzed obsługi Public AI zmień również CIVIC_AI_PROVIDER na operatora obsługiwanego przez poprzednią wersję.
 
