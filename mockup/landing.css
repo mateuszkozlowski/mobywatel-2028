@@ -84,3 +84,5 @@
 .technology-roles article { display: flex; flex-direction: column; }
 .technology-roles h3 { min-height: 2.44em; }
 .technology-roles a { margin-top: auto; }
+
+.technology-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; }
