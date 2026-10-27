@@ -1,0 +1,42 @@
+name: mobywatel2028
+services:
+  app:
+    build: ..
+    image: mobywatel-2028:${CIVIC_RELEASE:-r51}
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8790
+      CIVIC_PUBLIC_DEMO: 1
+      CIVIC_TRUST_PROXY: 1
+      CIVIC_STATE_DIR: /var/lib/mobywatel
+      AGENT_LOG: /tmp/mobywatel-http.log
+    expose: [8790]
+    read_only: true
+    tmpfs: [/tmp:size=256m,mode=1777]
+    volumes: [app_state:/var/lib/mobywatel]
+    mem_limit: 2g
+    cpus: 1.5
+    pids_limit: 96
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["80:80", "443:443"]
+    environment:
+      PUBLIC_HOST: ${PUBLIC_HOST:-mobywatel.mateuszkozlowski.xyz}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      app:
+        condition: service_healthy
+    mem_limit: 256m
+    pids_limit: 64
+volumes:
+  app_state:
+  caddy_data:
+  caddy_config:

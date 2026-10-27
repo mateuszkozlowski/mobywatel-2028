@@ -1,0 +1,13 @@
+.env
+**/.env
+**/*.log
+**/__pycache__
+**/*.pyc
+**/*.sqlite3
+**/*.sqlite3-*
+**/node_modules
+**/models
+.git
+private
+
+**/.public-cache

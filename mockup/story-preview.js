@@ -1,0 +1,7 @@
+/* Scrolling changes only the promotional mockup, never the live application. */
+const previewImages={intro:'assets/device-start-r56.png',letter:'assets/device-letter-r45.png',data:'assets/device-data-r45.png',alert:'assets/device-alert-r52.png'};let wantedPreview='intro';
+function civicPreviewStory(id){if(!previewImages[id])return;wantedPreview=id;const img=document.querySelector('#storyRenderImage');if(img.getAttribute('src')===previewImages[id])return;const next=new Image();next.onload=()=>{if(wantedPreview===id&&!civicShowcaseLaunched)img.src=previewImages[id]};next.src=previewImages[id]}
+const storyRatios=new Map();
+const previewObserver=new IntersectionObserver(entries=>{for(const e of entries)storyRatios.set(e.target,e.isIntersecting?e.intersectionRatio:0);if(civicShowcaseLaunched)return;const best=[...storyRatios].sort((a,b)=>b[1]-a[1])[0];if(best?.[1]>0)civicPreviewStory(best[0].dataset.storyPreview)},{threshold:[0,.15,.35,.6],rootMargin:'-15% 0px -20% 0px'});
+for(const [id,view] of [['idea','intro'],['story-letter','letter'],['story-data','data'],['story-alert','alert']]){const s=document.getElementById(id);s.dataset.storyPreview=view;previewObserver.observe(s)}
+const openMobileApp=event=>{if(!matchMedia('(max-width:760px)').matches)return;event.preventDefault();location.assign(showcaseAppUrl())};document.querySelector('#showPlay').addEventListener('click',openMobileApp);document.querySelector('.hero-actions a[href="#pokaz"]').addEventListener('click',openMobileApp);

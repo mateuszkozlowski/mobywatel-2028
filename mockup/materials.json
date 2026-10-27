@@ -1,0 +1,20 @@
+{
+  "release": "r59-local",
+  "items": [
+    {
+      "title": "mObywatel 2028",
+      "description": "Koncepcja w aplikacji oraz PDF do pobrania.",
+      "available": true,
+      "links": [
+        {
+          "path": "pokaz.html",
+          "label": "Zobacz koncepcję"
+        },
+        {
+          "path": "materialy/r57/mObywatel2028_R57_final.pdf",
+          "label": "Pobierz PDF"
+        }
+      ]
+    }
+  ]
+}

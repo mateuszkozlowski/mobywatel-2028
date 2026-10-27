@@ -1,0 +1,211 @@
+{
+  "title": "mObywatel 2028",
+  "release": "r57-local",
+  "date": "2026-10-27",
+  "items": [
+    {
+      "id": "idea",
+      "title": "Państwo, które pamięta za Ciebie.",
+      "summary": "Termin odpowiedzi, wyjaśnienie pisma i pomoc w przygotowaniu odpowiedzi. Sprawdzasz przed zatwierdzeniem.",
+      "index": 1,
+      "png": "png/slide-01.png",
+      "text": [
+        "01",
+        "mObywatel 2028",
+        "Państwo, które pamięta za Ciebie.",
+        "Dostajesz pismo. Widzisz termin i wyjaśnienie. Odpowiedź przygotowujesz z wybranych dokumentów.",
+        "Mateusz Kozłowski · koncepcja mObywatela na 2028 rok"
+      ],
+      "description": "01 mObywatel 2028 Państwo, które pamięta za Ciebie. Dostajesz pismo. Widzisz termin i wyjaśnienie. Odpowiedź przygotowujesz z wybranych dokumentów. Mateusz Kozłowski · koncepcja mObywatela na 2028 rok"
+    },
+    {
+      "id": "letter",
+      "title": "Co urząd chce od Marty?",
+      "summary": "Obok fragmentu oryginału znajduje się rzeczywiste wyjaśnienie Bielika z aplikacji. Pełny tekst pozostaje dostępny.",
+      "index": 2,
+      "png": "png/slide-02.png",
+      "text": [
+        "02",
+        "01 · ZROZUMIENIE PISMA",
+        "Co urząd chce od Marty?",
+        "Urząd pyta o faktury i wyjaśnienia dotyczące ulgi termomodernizacyjnej.",
+        "Decyzja projektowa Wyjaśnienie jest pierwsze. Oryginał zostaje pod ręką.",
+        "Oryginał pisma",
+        "Wyjaśnienie Bielika",
+        "Pełne żądanie pozostaje w źródle.",
+        "O co chodzi i jakie dokumenty należy przygotować.",
+        "Fragmenty działającej aplikacji, 27.10.2026. Fikcyjne pismo; wyjaśnienie wygenerowane przez Bielika."
+      ],
+      "description": "02 01 · ZROZUMIENIE PISMA Co urząd chce od Marty? Urząd pyta o faktury i wyjaśnienia dotyczące ulgi termomodernizacyjnej. Decyzja projektowa Wyjaśnienie jest pierwsze. Oryginał zostaje pod ręką. Oryginał pisma Wyjaśnienie Bielika Pełne żądanie pozostaje w źródle. O co chodzi i jakie dokumenty należy przygotować. Fragmenty działającej aplikacji, 27.10.2026. Fikcyjne pismo; wyjaśnienie wygenerowane przez Bielika. Urząd prosi o faktury i wyjaśnienia dotyczące ulgi termomodernizacyjnej. Wyjaśnienie Bielika można porównać z oryginałem."
+    },
+    {
+      "id": "difference",
+      "title": "Różnica: 4 200 zł.",
+      "summary": "Suma dwóch wybranych faktur wynosi 28 320 zł, a kwota w piśmie 32 520 zł. Kod pokazuje różnicę 4 200 zł przed zatwierdzeniem.",
+      "index": 3,
+      "png": "png/slide-03.png",
+      "text": [
+        "03",
+        "02 · PORÓWNANIE KWOT",
+        "Różnica: 4 200 zł.",
+        "Marta wybiera dwie faktury. Ich suma jest niższa niż kwota wskazana w piśmie.",
+        "Decyzja projektowa Rozbieżność widać przed zatwierdzeniem.",
+        "Porównanie w aplikacji",
+        "Sprawdź dokumenty i wyjaśnij różnicę.",
+        "Kwoty z opisów przykładowych plików. Różnicę oblicza kod. Odczyt własnych dokumentów wymaga sprawdzenia."
+      ],
+      "description": "03 02 · PORÓWNANIE KWOT Różnica: 4 200 zł. Marta wybiera dwie faktury. Ich suma jest niższa niż kwota wskazana w piśmie. Decyzja projektowa Rozbieżność widać przed zatwierdzeniem. Porównanie w aplikacji Sprawdź dokumenty i wyjaśnij różnicę. Kwoty z opisów przykładowych plików. Różnicę oblicza kod. Odczyt własnych dokumentów wymaga sprawdzenia. Suma dwóch faktur: 28 320 zł. Kwota z pisma: 32 520 zł. Różnica: 4 200 zł."
+    },
+    {
+      "id": "review",
+      "title": "Szkic nie kończy sprawy.",
+      "summary": "Przed wstawieniem szkicu widać kwoty, zastrzeżenia i edytowalną treść. Kolejny ekran pokazuje odbiorcę, temat oraz załączniki przed symulowanym wysłaniem.",
+      "index": 4,
+      "png": "png/slide-04.png",
+      "text": [
+        "04",
+        "03 · KONTROLA ODPOWIEDZI",
+        "Szkic nie kończy sprawy.",
+        "Tekst można poprawić. Przygotowanie szkicu niczego nie wysyła.",
+        "Decyzja projektowa Najpierw sprawdzenie, potem zatwierdzenie.",
+        "Co wymaga sprawdzenia",
+        "Treść do poprawienia",
+        "Widać różnicę kwot oraz pochodzenie danych.",
+        "Możesz poprawić szkic przed kolejnym krokiem.",
+        "Zrzut aplikacji na fikcyjnych danych. Podpis i wysłanie w klikalnym prototypie są symulowane."
+      ],
+      "description": "04 03 · KONTROLA ODPOWIEDZI Szkic nie kończy sprawy. Tekst można poprawić. Przygotowanie szkicu niczego nie wysyła. Decyzja projektowa Najpierw sprawdzenie, potem zatwierdzenie. Co wymaga sprawdzenia Treść do poprawienia Widać różnicę kwot oraz pochodzenie danych. Możesz poprawić szkic przed kolejnym krokiem. Zrzut aplikacji na fikcyjnych danych. Podpis i wysłanie w klikalnym prototypie są symulowane. Widać różnicę kwot 4 200 zł i informację, że dane przykładowych załączników pochodzą z opisów plików. Treść szkicu można poprawić."
+    },
+    {
+      "id": "privacy",
+      "title": "Tylko wybrane dane.",
+      "summary": "Widzisz odbiorcę i wybierasz zakres. Prośba dotycząca innej osoby zostaje zatrzymana.",
+      "index": 5,
+      "png": "png/slide-05.png",
+      "text": [
+        "05",
+        "Tylko wybrane dane.",
+        "Wypożyczalnia potrzebuje danych do wynajmu, a nie całego dokumentu.",
+        "Widzisz odbiorcę i wybierasz zakres. Prośbę dotyczącą innej osoby aplikacja zatrzymuje.",
+        "Imię i nazwisko Uprawnienia kierowcy",
+        "Wizualizacja koncepcji. Odbiorca i zakres są widoczne przed symulowanym przekazaniem."
+      ],
+      "description": "05 Tylko wybrane dane. Wypożyczalnia potrzebuje danych do wynajmu, a nie całego dokumentu. Widzisz odbiorcę i wybierasz zakres. Prośbę dotyczącą innej osoby aplikacja zatrzymuje. Imię i nazwisko Uprawnienia kierowcy Wizualizacja koncepcji. Odbiorca i zakres są widoczne przed symulowanym przekazaniem."
+    },
+    {
+      "id": "safety",
+      "title": "Komunikat prowadzi do działania.",
+      "summary": "Alarm, punkt schronienia i mapa. Po zamknięciu komunikatu pasek pozostaje na ekranie.",
+      "index": 6,
+      "png": "png/slide-06.png",
+      "text": [
+        "06",
+        "Komunikat prowadzi do działania.",
+        "Komunikat mówi, gdzie się schronić. Obok są mapa i prowadzenie. Pasek alarmu zostaje na ekranie po zamknięciu pełnego widoku.",
+        "Scenariusz alarmu. W aplikacji działa mapa. Wykaz PSP nie potwierdza bieżącego dostępu do obiektu."
+      ],
+      "description": "06 Komunikat prowadzi do działania. Komunikat mówi, gdzie się schronić. Obok są mapa i prowadzenie. Pasek alarmu zostaje na ekranie po zamknięciu pełnego widoku. Scenariusz alarmu. W aplikacji działa mapa. Wykaz PSP nie potwierdza bieżącego dostępu do obiektu."
+    },
+    {
+      "id": "technology",
+      "title": "Polski model. Jasny podział pracy.",
+      "summary": "Bielik pomaga z tekstem. Kod liczy kwoty i sprawdza reguły. Obywatel zatwierdza. Publiczna wersja używa API Public AI.",
+      "index": 7,
+      "png": "png/slide-07.png",
+      "text": [
+        "07",
+        "Polski model. Jasny podział pracy.",
+        "Bielik pomaga z tekstem. Obliczenia i zatwierdzanie mają osobną logikę.",
+        "Bielik",
+        "Wyjaśnienie pisma Fragmenty szkicu",
+        "Kod aplikacji",
+        "Kwoty i załączniki Znane źródła danych",
+        "Obywatel",
+        "Sprawdzenie treści Decyzja i zatwierdzenie",
+        "CERT Polska        IMGW        KG PSP",
+        "Domeny i ostrzeżenia            Pogoda            Punkty schronienia",
+        "Bielik przez Public AI. Rozmowa może trafić do API. Własne załączniki: odczyt na serwerze, poza API modelu."
+      ],
+      "description": "07 Polski model. Jasny podział pracy. Bielik pomaga z tekstem. Obliczenia i zatwierdzanie mają osobną logikę. Bielik Wyjaśnienie pisma Fragmenty szkicu Kod aplikacji Kwoty i załączniki Znane źródła danych Obywatel Sprawdzenie treści Decyzja i zatwierdzenie CERT Polska        IMGW        KG PSP Domeny i ostrzeżenia            Pogoda            Punkty schronienia Bielik przez Public AI. Rozmowa może trafić do API. Własne załączniki: odczyt na serwerze, poza API modelu."
+    },
+    {
+      "id": "research",
+      "title": "Co pokazały testy z 10 osobami?",
+      "summary": "Opracowanie testów wcześniejszej wersji obejmuje sześć zadań. Przy odpowiedzi na pismo: 1 przejście, 7 z trudnością, 2 problemy lub błędne wyniki. Osobno wykonano analizę 10 person syntetycznych.",
+      "index": 8,
+      "png": "png/slide-08.png",
+      "text": [
+        "08",
+        "Co pokazały testy z 10 osobami?",
+        "Sześć zadań we wcześniejszej wersji aplikacji. Każdy wiersz to 10 ocen.",
+        "Przejście",
+        "Z trudnością",
+        "Problem lub błędny wynik",
+        "Osobno: 10 person syntetycznych do analizy scenariuszy.",
+        "Źródło: opracowanie notatek z testów. Oceny sprzed zmian; brak surowych zapisów i ponownego pomiaru."
+      ],
+      "description": "08 Co pokazały testy z 10 osobami? Sześć zadań we wcześniejszej wersji aplikacji. Każdy wiersz to 10 ocen. Przejście Z trudnością Problem lub błędny wynik Osobno: 10 person syntetycznych do analizy scenariuszy. Źródło: opracowanie notatek z testów. Oceny sprzed zmian; brak surowych zapisów i ponownego pomiaru. Pierwszy ekran: przejście 5, z trudnością 5, problem lub błędny wynik 0. Dokument i pojazd: przejście 8, z trudnością 2, problem lub błędny wynik 0. Odpowiedź na pismo: przejście 1, z trudnością 7, problem lub błędny wynik 2. Zakres danych: przejście 9, z trudnością 1, problem lub błędny wynik 0. Podejrzana wiadomość: przejście 5, z trudnością 2, problem lub błędny wynik 3. Powrót do szkicu: przejście 5, z trudnością 3, problem lub błędny wynik 2."
+    },
+    {
+      "id": "changes",
+      "title": "Od problemu do zmiany.",
+      "summary": "Po testach zmieniono kierowanie opisów oszustwa, porównywanie załączników oraz odtwarzanie szkicu. Pokazujemy zmianę zachowania, bez przypisywania jej niezmierzonego efektu.",
+      "index": 9,
+      "png": "png/slide-09.png",
+      "text": [
+        "09",
+        "Od problemu do zmiany.",
+        "Trzy problemy z opracowania testów i zmiany wprowadzone w aplikacji.",
+        "WCZEŚNIEJ",
+        "PO POPRAWCE",
+        "Opis oszustwa ze słowem „zaloguj” prowadził do kodu QR.",
+        "Opis oszustwa ma pierwszeństwo. Otwiera sprawdzenie wiadomości.",
+        "Inny plik zasłaniał porównanie kwot.",
+        "Porównanie pozostaje widoczne także z dodatkowym plikiem.",
+        "Po przeładowaniu strony znikał szkic.",
+        "Powrót do tej samej sesji odtwarza szkic i załączniki.",
+        "Opis wprowadzonych zmian. Nie jest to wynik ponownego badania skuteczności."
+      ],
+      "description": "09 Od problemu do zmiany. Trzy problemy z opracowania testów i zmiany wprowadzone w aplikacji. WCZEŚNIEJ PO POPRAWCE Opis oszustwa ze słowem „zaloguj” prowadził do kodu QR. Opis oszustwa ma pierwszeństwo. Otwiera sprawdzenie wiadomości. Inny plik zasłaniał porównanie kwot. Porównanie pozostaje widoczne także z dodatkowym plikiem. Po przeładowaniu strony znikał szkic. Powrót do tej samej sesji odtwarza szkic i załączniki. Opis wprowadzonych zmian. Nie jest to wynik ponownego badania skuteczności."
+    },
+    {
+      "id": "pilot",
+      "title": "Zacznijmy od jednego pisma.",
+      "summary": "Propozycja: jeden urząd, jeden typ pisma, trzy miesiące. Potrzebne są identyfikator sprawy, termin i zakres dokumentów. Mierzymy rozumienie i kompletność odpowiedzi.",
+      "index": 10,
+      "png": "png/slide-10.png",
+      "text": [
+        "10",
+        "Zacznijmy od jednego pisma.",
+        "Jeden urząd. Jeden typ pisma. Trzy miesiące.",
+        "01",
+        "Przygotowanie",
+        "Identyfikator sprawy, termin i wymagane dokumenty.",
+        "02",
+        "Próba",
+        "Nowa i dotychczasowa ścieżka. Te same zadania i warunki.",
+        "03",
+        "Ocena",
+        "Zrozumienie i kompletność. Błędy i decyzja o kontynuacji.",
+        "Proponowany zakres pilotażu. Integracje i zasady przetwarzania wymagają uzgodnienia z urzędem."
+      ],
+      "description": "10 Zacznijmy od jednego pisma. Jeden urząd. Jeden typ pisma. Trzy miesiące. 01 Przygotowanie Identyfikator sprawy, termin i wymagane dokumenty. 02 Próba Nowa i dotychczasowa ścieżka. Te same zadania i warunki. 03 Ocena Zrozumienie i kompletność. Błędy i decyzja o kontynuacji. Proponowany zakres pilotażu. Integracje i zasady przetwarzania wymagają uzgodnienia z urzędem."
+    },
+    {
+      "id": "closing",
+      "title": "Sprawdź na jednym piśmie.",
+      "summary": "Przejdź przez pismo Marty, wybierz dwie faktury i zobacz różnicę 4 200 zł przed zatwierdzeniem.",
+      "index": 11,
+      "png": "png/slide-11.png",
+      "text": [
+        "11",
+        "mObywatel 2028",
+        "Sprawdź na jednym piśmie.",
+        "Otwórz pismo Marty. Wybierz dwie faktury i sprawdź różnicę przed zatwierdzeniem.",
+        "mobywatel.mateuszkozlowski.xyz",
+        "Mateusz Kozłowski · klikalna koncepcja konkursowa"
+      ],
+      "description": "11 mObywatel 2028 Sprawdź na jednym piśmie. Otwórz pismo Marty. Wybierz dwie faktury i sprawdź różnicę przed zatwierdzeniem. mobywatel.mateuszkozlowski.xyz Mateusz Kozłowski · klikalna koncepcja konkursowa"
+    }
+  ]
+}

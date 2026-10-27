@@ -1,0 +1,34 @@
+{
+  "retrieved": "2026-10-27",
+  "ownerRights": "Institutional marks remain with their owners; not relicensed under the project code MIT license.",
+  "assets": [
+    {
+      "file": "bielik.png",
+      "source": "https://bielik.ai/wp-content/uploads/2025/07/Bielik.ai_secondary_rabarbar-1.png",
+      "sourcePage": "https://bielik.ai/",
+      "sha256": "9416398c21fbc7de5a828ae0d10c5c3a85d9235864662b2cd7d5ff6eec705fac",
+      "usage": "Identify the model or public data source used; no partnership or endorsement asserted."
+    },
+    {
+      "file": "psp.svg",
+      "source": "https://www.gov.pl/attachment/06536627-f370-4583-88dc-e718528c1220",
+      "sourcePage": "https://www.gov.pl/web/kgpsp/logotyp-psp",
+      "sha256": "bc42e41b288460f06613f7f115e4458f237b5953bac66408cbbc660f808de90b",
+      "usage": "Identify the model or public data source used; no partnership or endorsement asserted."
+    },
+    {
+      "file": "cert.svg",
+      "source": "https://cert.pl/",
+      "extraction": "Unmodified SVG bytes decoded from the official desktop-header logo CSS data URL.",
+      "sha256": "122c73685268e97c4173b4099060b99f7434f54db81e30dbf43dbade0d65ff1f",
+      "usage": "Identify Lista Ostrzeżeń CERT Polska; no partnership or endorsement asserted."
+    },
+    {
+      "file": "imgw.png",
+      "source": "https://bip.imgw.pl/wp-content/themes/bip-imgw/img/logo.png",
+      "sourcePage": "https://bip.imgw.pl/",
+      "sha256": "039e361c96a1237a76d7e51dddac5b5561875498e6c56826e85887ed12dd4781",
+      "usage": "Unmodified institution logo identifies public weather data source; no partnership asserted."
+    }
+  ]
+}

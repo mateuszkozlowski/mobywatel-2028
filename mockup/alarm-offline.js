@@ -1,0 +1,12 @@
+/* Public points saved for a known area. No GPS history, route or entry status. */
+const civicShelterOffline=(()=>{
+ const version=2,limit=20,prefix='mobywatel-shelters-offline-';
+ const validArea=p=>p&&Number.isFinite(p.lat)&&Number.isFinite(p.lon)&&p.lat>=49&&p.lat<=55.5&&p.lon>=14&&p.lon<=24.5;
+ const key=p=>prefix+p.lat.toFixed(3)+','+p.lon.toFixed(3);
+ const metres=(a,b)=>{const rad=x=>x*Math.PI/180,h=Math.sin(rad(b.lat-a.lat)/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(rad(b.lon-a.lon)/2)**2;return Math.round(6371000*2*Math.atan2(Math.sqrt(h),Math.sqrt(Math.max(0,1-h))))};
+ function points(area,items){if(!Array.isArray(items))return [];return items.slice(0,100).filter(p=>validArea(p)&&typeof p.id==='string'&&p.id.length>0&&typeof(p.address||p.name)==='string'&&(p.address||p.name).trim().length>0).map(p=>({id:String(p.id||'').slice(0,120),address:String(p.address||p.name).slice(0,250),name:String(p.name||'').slice(0,250),addressNeedsCheck:p.addressNeedsCheck===true,city:String(p.city||'').slice(0,120),county:String(p.county||'').slice(0,120),region:String(p.region||'').slice(0,120),availability:String(p.availability||'').slice(0,120),kind:String(p.kind||'').slice(0,150),lat:p.lat,lon:p.lon,distanceMeters:metres(area,p)})).filter(p=>p.distanceMeters<=30000).sort((a,b)=>a.distanceMeters-b.distanceMeters).slice(0,limit)}
+ function read(area){if(!validArea(area))return null;try{const raw=localStorage.getItem(key(area));if(!raw||raw.length>100000)return null;const data=JSON.parse(raw);if(data.version!==version||data.area?.lat!==area.lat||data.area?.lon!==area.lon||!Number.isFinite(Date.parse(data.savedAt))||Date.parse(data.savedAt)>Date.now()+300000)return null;const items=points(area,data.items);return items.length?{items,savedAt:data.savedAt,fetchedAt:data.fetchedAt||null,offline:true}:null}catch(e){return null}}
+ function save(area,data){if(!validArea(area))return false;const items=points(area,data?.items);if(!items.length)return false;const value={version,area:{lat:area.lat,lon:area.lon},savedAt:new Date().toISOString(),fetchedAt:typeof data.fetchedAt==='string'&&Number.isFinite(Date.parse(data.fetchedAt))?data.fetchedAt:null,items};try{localStorage.setItem(key(area),JSON.stringify(value));return true}catch(e){return false}}
+ function clear(area){if(!validArea(area))return false;try{localStorage.removeItem(key(area));return true}catch(e){return false}}
+ return {read,save,clear};
+})();

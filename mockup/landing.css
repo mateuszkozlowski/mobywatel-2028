@@ -1,0 +1,86 @@
+/* The landing is the presentation. Keep product stories and evidence in one sequence. */
+.site-header .site-nav { gap: 2px; }
+.opening .hero-actions a[href="#pokaz"] { display: inline-flex; }
+.opening .hero-actions .text-link { padding-inline: 8px; font-size: 13px; }
+.opening .opening-footnote { margin-top: 24px; }
+.story-play > h2 { font-size: 25px; line-height: 1.18; letter-spacing: -.025em; max-width: 22ch; margin-bottom: 30px; }
+.story-panel { scroll-margin-top: 0; }
+.story-panel-copy h3 { text-wrap: pretty; }
+.story-layout { padding-bottom: 70px; }
+.landing-section { max-width: var(--site-width); padding: 60px var(--site-gutter); margin: 0 auto; border-top: 1px solid var(--line); scroll-margin-top: 0; }
+.section-heading { max-width: 720px; }
+.section-kicker { margin: 0 0 18px; font-size: 12px; line-height: 1.6; color: var(--muted); font-weight: 600; }
+.section-heading h2, .pilot-overview h2 { margin: 0 0 22px; font-size: clamp(32px,3.6vw,46px); line-height: 1.07; letter-spacing: -.04em; text-wrap: pretty; }
+.section-heading > p:not(.section-kicker), .pilot-overview > div > p:not(.section-kicker) { max-width: 58ch; margin: 0; color: var(--muted); font-size: 17px; line-height: 1.65; }
+.technology-roles { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 32px; margin: 40px 0 20px; }
+.technology-roles article { min-width: 0; }
+.technology-mark { display: flex; align-items: center; height: 80px; margin-bottom: 24px; }
+.technology-mark img { display: block; max-width: 160px; height: auto; object-fit: contain; }
+.cert-mark { border-radius: 12px; background: var(--navy); padding: 18px; width: min(100%,210px); }
+.cert-mark img { width: 100%; max-width: 180px; }
+.psp-mark { gap: 13px; }
+.psp-mark img { width: 52px; height: 64px; padding: 10px 0; box-sizing: content-box; }
+.psp-mark span { font-size: 12px; line-height: 1.5; font-weight: 600; }
+.imgw-mark { gap: 12px; }
+.imgw-mark img { width: 64px; height: 64px; }
+.imgw-mark > span { font-size: 11px; line-height: 1.5; font-weight: 600; }
+.technology-roles h3 { font-size: 21px; line-height: 1.22; margin: 0 0 12px; letter-spacing: -.025em; text-wrap: pretty; }
+.technology-roles p { margin: 0 0 12px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.technology-roles a { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 12px; color: var(--muted); text-decoration: none; }
+.technology-roles a:hover { color: var(--primary); text-decoration: underline; }
+.research-overview { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; }
+.research-overview .text-link { margin-top: 20px; }
+.research-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 0 0 32px; }
+.research-counts > div { display: flex; flex-direction: column-reverse; }
+.research-counts dt { max-width: 22ch; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.research-counts dd { margin: 0 0 6px; font: 600 60px/1.1 'Instrument Sans',Inter,sans-serif; letter-spacing: -.04em; }
+.research-change { border-radius: 20px; background: #e4ebfb; padding: 24px; }
+.research-change .section-kicker { font-size: 11px; }
+.research-change p { font-size: 15px; line-height: 1.6; margin: 12px 0 0; color: var(--muted); }
+.change-connector { color: #496ba6; font-size: 22px; line-height: 1.5; margin: 6px 0; }
+.research-change strong { display: block; font-size: 16px; line-height: 1.6; font-weight: 600; }
+.research-scope-note { margin: 16px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.pilot-overview { display: flex; align-items: center; justify-content: space-between; gap: 60px; }
+.pilot-overview > div { max-width: 660px; }
+.pilot-overview .button-primary { flex-shrink: 0; }
+.pilot-overview .text-link { margin-top: 16px; }
+:where(.landing-section) :focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+@media(max-width:1000px) { .technology-roles { gap: 24px; } .research-overview { gap: 40px; } .pilot-overview { align-items: flex-start; flex-direction: column; gap: 24px; } }
+@media(max-width:760px) {
+  .site-header .site-nav { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .story-layout { padding-bottom: 36px; }
+  .story-play > h2 { font-size: 28px; margin-bottom: 26px; }
+  .landing-section { padding-block: 36px; }
+  .section-heading h2, .pilot-overview h2 { font-size: 34px; }
+  .section-heading > p:not(.section-kicker), .pilot-overview > div > p:not(.section-kicker) { font-size: 16px; }
+  .technology-roles { grid-template-columns: 1fr 1fr; gap: 30px 22px; margin: 28px 0 12px; }
+  .technology-mark { margin-bottom: 16px; height: 70px; }
+  .technology-mark img { max-width: 140px; }
+  .cert-mark { padding: 12px; }
+  .psp-mark { gap: 8px; }
+  .psp-mark img { width: 42px; height: 52px; padding-block: 8px; }
+  .psp-mark span { font-size: 10px; }
+  .technology-roles h3 { font-size: 20px; }
+  .technology-roles p { font-size: 13px; }
+  .research-overview { grid-template-columns: 1fr; gap: 28px; }
+  .research-counts { margin-bottom: 24px; }
+  .research-counts dd { font-size: 52px; }
+  .research-counts dt { font-size: 12px; }
+  .research-change { padding: 22px; }
+}
+@media(max-width:380px) { .technology-roles { gap: 28px 16px; } .technology-mark img { max-width: 122px; } .technology-roles h3 { font-size: 19px; } .psp-mark span { font-size: 9px; } }
+
+@media(max-width:760px) { .imgw-mark { gap: 8px; } .imgw-mark img { width: 48px; height: 48px; } .imgw-mark > span { font-size: 9px; } }
+
+/* Scene descriptions already live in the story. Keep only the interactive conflict variant by the phone. */
+.demo-rail .guide { display: none; order: 0; }
+.demo-rail .guide:has(.scene-variant:not([hidden])) { display: block; }
+.demo-rail .scene-insight { margin: 0; padding: 0; border: 0; background: transparent; }
+.demo-rail .scene-insight :is(h2,p,details) { display: none; }
+.demo-rail .scene-variant { width: 100%; margin: 0; }
+.demo-rail:has(.render-intro:not([hidden])) .guide { display: none; }
+
+/* Allow complete Polish headings while keeping technology links aligned. */
+.technology-roles article { display: flex; flex-direction: column; }
+.technology-roles h3 { min-height: 2.44em; }
+.technology-roles a { margin-top: auto; }

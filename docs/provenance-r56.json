@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-27",
+  "kind": "generated concept product render",
+  "asset": "mockup/assets/device-start-r56.png",
+  "tool": "ImageGen",
+  "reference": "mockup/assets/device-letter-r45.png",
+  "purpose": "Hero render for project materials, not a screenshot of running software",
+  "fakeProfiles": true,
+  "slideProduction": "Editable typography and diagrams, exported to PNG, with soft short connectors only where a relationship needs explanation."
+}

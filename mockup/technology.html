@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Technologia — mObywatel 2028</title>
+<meta name="description" content="Jak aplikacja korzysta z Bielika, porównuje kwoty i pobiera dane publiczne.">
+<link rel="icon" href="assets/icon-mobywatel.svg">
+<link rel="stylesheet" href="pokaz.css?v=160">
+<link rel="stylesheet" href="navigation.css?v=160">
+<link rel="stylesheet" href="technology.css?v=160">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=160">
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<header class="site-header"><a class="brand" href="/pokaz.html" aria-label="mObywatel 2028 — strona główna"><img src="assets/icon-mobywatel.svg" alt="" width="30" height="30"><span>mObywatel <b>2028</b></span></a><nav class="site-nav" aria-label="Nawigacja projektu"><a href="/pokaz.html#opowiesc">Jak działa</a><a href="/pokaz.html#technologia" aria-current="location">Technologia</a><a href="/pokaz.html#badania">Badania</a></nav><a class="site-try" href="/pokaz.html?view=app#pokaz" aria-label="Wypróbuj aplikację"><span>Wypróbuj<span class="try-extra"> aplikację</span></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></header>
+<main id="main" class="tech-main site-page">
+<section class="tech-opening page-intro">
+<h1>Bielik wyjaśnia.<br>Kod sprawdza liczby.</h1>
+<p class="page-lead">Zobacz, jak Bielik wyjaśnia pismo i jak aplikacja porównuje kwoty oraz załączniki.</p>
+<div class="page-actions"><a class="button-primary" href="/pokaz.html?view=app#pokaz">Wypróbuj aplikację</a><a class="text-link tech-secondary" href="#przeplyw">Zobacz przepływ danych</a></div>
+<div class="role-map" aria-label="Trzy role">
+<div>
+<h2>Bielik</h2>
+<p>Pomaga zrozumieć pismo<br>i sformułować odpowiedź.</p>
+</div>
+<div>
+<h2>Kod aplikacji</h2>
+<p>Porównuje kwoty z pisma<br>i wybranych załączników.</p>
+</div>
+<div>
+<h2>Obywatel</h2>
+<p>Sprawdza treść i załączniki.<br>Zatwierdza następny krok.</p>
+</div>
+</div>
+</section>
+<section class="tech-section" id="przeplyw">
+<div class="section-intro">
+<h2>Co trafia do modelu?</h2>
+<p>Wersja dostępna w internecie korzysta z API Public AI. Własne pliki przetwarzamy osobno.</p>
+</div>
+<div class="flow-lanes">
+<article class="flow-lane">
+<h3>Pismo z przykładowego profilu</h3>
+<ol>
+<li>
+<strong>Fikcyjne pismo</strong>
+<span>Aplikacja przekazuje tekst pisma, termin odpowiedzi i dane sprawy.</span>
+</li>
+<li>
+<strong>Bielik przez Public AI</strong>
+<span>Model proponuje wyjaśnienie pisma lub fragmenty odpowiedzi.</span>
+</li>
+<li>
+<strong>Reguły aplikacji</strong>
+<span>Aplikacja sprawdza wybrane liczby, źródła i wymagane dokumenty.</span>
+</li>
+<li>
+<strong>Przegląd</strong>
+<span>Porównujesz wyjaśnienie z oryginałem i sprawdzasz szkic odpowiedzi.</span>
+</li>
+</ol>
+</article>
+<article class="flow-lane own-files">
+<h3>Własny załącznik</h3>
+<ol>
+<li>
+<strong>Wybrany plik</strong>
+<span>Plik trafia do odczytu na serwer MyDevil.</span>
+</li>
+<li>
+<strong>Odczyt tekstu z pliku</strong>
+<span>Tekst odczytują Poppler i Tesseract. Odczyt może zawierać błędy.</span>
+</li>
+<li>
+<strong>Obliczenia i szablon</strong>
+<span>Aplikacja przygotowuje szkic według szablonu. Treść pliku nie trafia do Public AI.</span>
+</li>
+<li>
+<strong>Przegląd</strong>
+<span>Sprawdzasz kwoty, treść i załączniki przed zatwierdzeniem.</span>
+</li>
+</ol>
+</article>
+</div>
+<p class="tech-note">Gdy rozmawiasz z asystentem, do API mogą trafić Twoja wiadomość, kontekst ekranu i część wcześniejszej rozmowy. Własne pliki aplikacja odczytuje na serwerze. Pliki, odczytany tekst i szkice zapisuje również w przeglądarce. Możesz je usunąć w ustawieniach przeglądarki, czyszcząc dane tej witryny.</p>
+</section>
+<section class="tech-proof tech-section" id="liczby">
+<div>
+<h2>4 200 zł różnicy.<br>Oblicza ją aplikacja.</h2>
+<p>Suma dwóch faktur Marty jest niższa od kwoty wskazanej w piśmie. Aplikacja oblicza różnicę. Użytkownik może dołączyć brakujący dokument lub poprawić odpowiedź.</p>
+<p class="tech-note">Obliczenia korzystają z typu Decimal. Odczyt i przyporządkowanie dokumentów nadal trzeba sprawdzić. To porównanie kwot, nie ocena prawa do ulgi.</p>
+</div>
+<div class="math-proof" aria-label="Faktury 28 320 zł, pismo 32 520 zł, różnica 4 200 zł">
+<div>
+<span>Wybrane faktury</span>
+<strong>28 320 zł</strong>
+</div>
+<div>
+<span>Kwota z pisma</span>
+<strong>32 520 zł</strong>
+</div>
+<div class="math-result">
+<span>Do wyjaśnienia</span>
+<strong>4 200 zł</strong>
+<p>Sprawdź dokumenty przed zatwierdzeniem.</p>
+</div>
+</div>
+</section>
+<section class="tech-section" id="zrodla">
+<div class="section-intro">
+<h2>Z jakich źródeł korzystamy?</h2>
+</div>
+<div class="source-list">
+<article>
+<h3>Bielik</h3>
+<p>Korzystamy z modelu <code>Bielik-11B-v3.0-Instruct</code>, który opracowały SpeakLeash i ACK Cyfronet AGH. W publicznym pokazie udostępnia go Public AI. Model wyjaśnia przykładowe pisma, proponuje fragmenty odpowiedzi i pomaga znaleźć odpowiednią funkcję aplikacji.</p>
+<a href="https://huggingface.co/speakleash/Bielik-11B-v3.0-Instruct" target="_blank" rel="noopener">Karta modelu ↗</a>
+</article>
+<article>
+<h3>CERT Polska</h3>
+<p>Lista Ostrzeżeń NASK służy do sprawdzania domen. Aplikacja porównuje adres z listą bez otwierania podejrzanej strony. Brak wpisu nie potwierdza bezpieczeństwa.</p>
+<a href="https://cert.pl/lista-ostrzezen/" target="_blank" rel="noopener">Lista Ostrzeżeń ↗</a>
+</article>
+<article>
+<h3>IMGW</h3>
+<p>Aplikacja pobiera ostrzeżenia pogodowe i hydrologiczne wraz z obszarem oraz czasem obowiązywania. Alarm powietrzny pokazujemy w osobnym scenariuszu.</p>
+<a href="https://danepubliczne.imgw.pl/" target="_blank" rel="noopener">Dane publiczne IMGW ↗</a>
+</article>
+<article>
+<h3>KG PSP</h3>
+<p>Aplikacja wyszukuje punkty z wykazu PSP w pobliżu wskazanej lokalizacji. Korzysta z mapy OpenStreetMap, a trasę otwiera w Google Maps. Wykaz nie potwierdza, czy obiekt jest teraz dostępny.</p>
+<a href="https://dane.gov.pl/pl/dataset/28058,punkty-schronienia-w-polsce" target="_blank" rel="noopener">Źródło punktów ↗</a>
+</article>
+</div>
+</section>
+<section class="tech-section" id="kontrola">
+<div class="section-intro">
+<h2>Sprawdzasz źródła i treść odpowiedzi</h2>
+<p>Przy wyjaśnieniu widzisz fragmenty oryginału. Przed wysłaniem sprawdzasz odbiorcę, treść i załączniki. Adresat i temat pochodzą z pisma.</p>
+</div>
+<div class="plain-columns">
+<article>
+<h3>Co sprawdza aplikacja</h3>
+<p>Aplikacja sprawdza wybrane liczby i wymagane dokumenty, porównuje załączniki i wymaga określonego formatu odpowiedzi modelu. Użytkownik wyjaśnia wątpliwości przed zatwierdzeniem.</p>
+</article>
+<article>
+<h3>Co trzeba sprawdzić samodzielnie</h3>
+<p>Zgodne kwoty i wskazane źródła nie gwarantują, że model poprawnie wyjaśnił pismo. Użytkownik może porównać wyjaśnienie z oryginałem i poprawić tekst odpowiedzi.</p>
+</article>
+</div>
+</section>
+<section class="tech-section" id="gotowosc">
+<div class="section-intro">
+<h2>Co już działa i czego potrzeba do wdrożenia?</h2>
+</div>
+<div class="readiness-table" role="region" aria-label="Zakres integracji" tabindex="0">
+<table>
+<thead>
+<tr>
+<th>Obszar</th>
+<th>W tym pokazie</th>
+<th>Do wdrożenia urzędowego</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Wyjaśnienie i szkic</th>
+<td data-label="W tym pokazie">Wyjaśnienia przygotowuje Bielik przez API. Aplikacja zapisuje wyniki, by móc użyć ich ponownie.</td>
+<td data-label="Do wdrożenia urzędowego">Ocena jakości dla wybranego typu pisma i umowa określająca zasady przetwarzania danych.</td>
+</tr>
+<tr>
+<th>Załączniki i kwoty</th>
+<td data-label="W tym pokazie">Odczyt plików na serwerze, obliczenia i przegląd.</td>
+<td data-label="Do wdrożenia urzędowego">Bezpieczny kanał dokumentów oraz uzgodnione reguły walidacji.</td>
+</tr>
+<tr>
+<th>Źródła publiczne</th>
+<td data-label="W tym pokazie">Dane CERT, IMGW i PSP. Aplikacja pokazuje czas pobrania i oznacza nieaktualne wyniki.</td>
+<td data-label="Do wdrożenia urzędowego">Warunki dostępności, aktualności i obsługa awarii.</td>
+</tr>
+<tr>
+<th>Dane obywatela</th>
+<td data-label="W tym pokazie">Cztery fikcyjne profile i przygotowane sprawy.</td>
+<td data-label="Do wdrożenia urzędowego">Uprawniony dostęp do właściwych rejestrów i doręczeń.</td>
+</tr>
+<tr>
+<th>Podpis i wysyłka</th>
+<td data-label="W tym pokazie">Podpis i wysyłka są symulowane.</td>
+<td data-label="Do wdrożenia urzędowego">Integracja podpisu, doręczeń i potwierdzenia odbioru.</td>
+</tr>
+<tr>
+<th>Alarm RCB</th>
+<td data-label="W tym pokazie">Scenariusz interfejsu z mapą punktów.</td>
+<td data-label="Do wdrożenia urzędowego">Autoryzowany kanał komunikatów i proces aktualizacji.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="tech-section tech-close" id="pilotaz">
+<h2>Jedno pismo.<br>Jeden urząd. Trzy miesiące.</h2>
+<p>Do pilotażu potrzebujemy danych sprawy: jej identyfikatora, terminu odpowiedzi i listy wymaganych dokumentów. Sprawdzimy, czy odbiorcy rozumieją pismo i przygotowują kompletną odpowiedź. Zmierzymy też liczbę błędów w wyjaśnieniach.</p>
+<div class="page-actions">
+<a class="button-primary" href="/pokaz.html?view=app#pokaz">Wypróbuj odpowiedź na pismo</a>
+<a class="text-link" href="/pokaz.html#technologia">Wróć na stronę główną</a>
+</div>
+<details class="engineering">
+<summary>Szczegóły dla zespołu technicznego</summary>
+<dl>
+<div>
+<dt>Backend i hosting</dt>
+<dd>Serwer: Python, FreeBSD i MyDevil MD1. Klucz API pozostaje wyłącznie na serwerze. Interfejs korzysta z HTML, CSS i JavaScript.</dd>
+</div>
+<div>
+<dt>Koszt pokazu</dt>
+<dd>Aplikacja ma limit wydatków na model: 1 USD na miesiąc, liczony według czasu UTC. Przed każdym wywołaniem rezerwuje jego koszt. Wyniki przechowuje w pamięci podręcznej do 7 dni. Limit dotyczy wywołań modelu w pokazie. Nie jest wyceną wdrożenia urzędowego ani limitem całego konta operatora.</dd>
+</div>
+<div>
+<dt>Gdy model nie odpowiada</dt>
+<dd>Nadal można korzystać z formularzy i przeczytać oryginał pisma. Jeśli szkic powstanie bez modelu, aplikacja informuje, jak go przygotowała.</dd>
+</div>
+<div>
+<dt>Polski model, operator API</dt>
+<dd>Model powstał w Polsce. Public AI jest zagranicznym operatorem. Lokalnie model można uruchomić przez Ollamę.</dd>
+</div>
+<div>
+<dt>Sprawdzenia R55</dt>
+<dd>65 testów backendu przeszło przed publikacją 26.10.2026. To testy wskazanych reguł i scenariuszy, nie audyt bezpieczeństwa ani certyfikacja.</dd>
+</div>
+</dl>
+</details>
+</section>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div class="footer-identity"><a class="brand" href="/pokaz.html" aria-label="mObywatel 2028 — strona główna"><img src="assets/icon-mobywatel.svg" alt="" width="30" height="30"><span>mObywatel <b>2028</b></span></a><p>Mateusz Kozłowski · mObywatel Challenge</p></div><nav class="footer-nav" aria-label="Informacje o projekcie"><a href="/technology.html">Opis techniczny</a><a href="/materialy.html">Wyniki badań</a><a href="/materialy/r57/mObywatel2028_R57_final.pdf" download>Prezentacja PDF <span aria-hidden="true">↓</span></a><a href="https://mobywatel.ai/" target="_blank" rel="noopener">O konkursie <span aria-hidden="true">↗</span></a></nav></div></footer>
+<script src="navigation-ui.js?v=160">
+</script>
+</body>
+</html>

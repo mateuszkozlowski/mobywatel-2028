@@ -1,0 +1,75 @@
+{
+  "status": "completed",
+  "updated": "2026-10-26",
+  "syntheticPersonas": 10,
+  "participants": 10,
+  "rounds": [],
+  "results": [],
+  "quotes": [],
+  "note": "Analiza 10 person syntetycznych i testy z 10 rzeczywistymi użytkownikami to osobne etapy. Autor doprecyzował, że przesłana tabela i obserwacje są opracowaniem testów z użytkownikami.",
+  "studySummary": {
+    "source": "Opracowanie notatek z testów dostarczone przez autora",
+    "scope": "Wersja aplikacji sprzed opisanych poprawek",
+    "date": null,
+    "version": null,
+    "assessments": [
+      {
+        "task": "Pierwszy ekran",
+        "passed": 5,
+        "difficult": 5,
+        "blocked": 0,
+        "total": 10
+      },
+      {
+        "task": "Dokument i pojazd",
+        "passed": 8,
+        "difficult": 2,
+        "blocked": 0,
+        "total": 10
+      },
+      {
+        "task": "Odpowiedź na pismo",
+        "passed": 1,
+        "difficult": 7,
+        "blocked": 2,
+        "total": 10
+      },
+      {
+        "task": "Zakres danych",
+        "passed": 9,
+        "difficult": 1,
+        "blocked": 0,
+        "total": 10
+      },
+      {
+        "task": "Podejrzana wiadomość",
+        "passed": 5,
+        "difficult": 2,
+        "blocked": 3,
+        "total": 10
+      },
+      {
+        "task": "Powrót do szkicu",
+        "passed": 5,
+        "difficult": 3,
+        "blocked": 2,
+        "total": 10
+      }
+    ],
+    "caveat": "Oceny z opracowania notatek. Brak surowych zapisów i ponownego pomiaru po poprawkach."
+  },
+  "findings": [
+    {
+      "problem": "Podejrzany SMS ze słowem „zaloguj” prowadził do logowania.",
+      "change": "Opis oszustwa ma pierwszeństwo przed poleceniem logowania."
+    },
+    {
+      "problem": "Dodatkowy plik ukrywał porównanie kwot w odpowiedzi.",
+      "change": "Porównanie pozostaje widoczne, a treść i załączniki są sprawdzane przed zatwierdzeniem."
+    },
+    {
+      "problem": "Szkic znikał po przeładowaniu strony.",
+      "change": "Szkic jest odtwarzany przy powrocie do tego samego pokazu."
+    }
+  ]
+}

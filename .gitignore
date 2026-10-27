@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!deploy/.env.example
+.state/
+.public-cache/
+*.sqlite3*
+*.db
+*.log
+*.key
+admin-auth*.json
+runtime*.env
+.DS_Store
+node_modules/
+.venv/
+
+# Local authoring formats are not distributed in the public source repository.
+*.pptx
+*_PNG.zip
+work/
+outputs/

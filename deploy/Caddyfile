@@ -1,0 +1,20 @@
+{$PUBLIC_HOST} {
+  encode zstd gzip
+  request_body {
+    max_size 10MB
+  }
+  header {
+    X-Content-Type-Options nosniff
+    Referrer-Policy strict-origin-when-cross-origin
+    X-Frame-Options SAMEORIGIN
+    Strict-Transport-Security "max-age=86400"
+    -Server
+  }
+  reverse_proxy app:8790 {
+    header_up X-Forwarded-For {remote_host}
+    transport http {
+      dial_timeout 5s
+      response_header_timeout 110s
+    }
+  }
+}
